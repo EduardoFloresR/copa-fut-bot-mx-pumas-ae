@@ -1,0 +1,55 @@
+project:
+  name: "Copa FutBotMX - PUMAS AE"
+  description: "Pipeline de visión por computadora para análisis de futbol robótico."
+  version: "0.1.0"
+
+paths:
+  raw_data_dir: "data/raw"
+  clips_dir: "data/clips"
+  frames_dir: "data/frames"
+  annotations_dir: "data/annotations"
+  processed_dir: "data/processed"
+  masks_dir: "outputs/masks"
+  tracks_dir: "outputs/tracks"
+  figures_dir: "outputs/figures"
+  videos_dir: "outputs/videos"
+  logs_dir: "outputs/logs"
+
+video:
+  target_width: 960
+  target_fps: 10
+  initial_clip_start: "00:00:10"
+  initial_clip_duration: "00:00:20"
+
+sam3:
+  model_name: "facebook/sam3"
+  device: "cuda"
+  prompts:
+    field: "playing field"
+    ball: "soccer ball"
+    robot: "robot soccer player"
+    ally_robot: "blue robot"
+    opponent_robot: "red robot"
+    goal: "goal"
+
+segmentation:
+  min_mask_area_px: 50
+  save_masks: true
+  save_overlay_frames: true
+
+tracking:
+  method: "centroid_distance"
+  max_assignment_distance_px: 80
+  max_missing_frames: 5
+
+events:
+  possession_distance_px: 60
+  collision_distance_px: 40
+  shot_speed_threshold_px_s: 250
+
+visualization:
+  draw_masks: true
+  draw_bounding_boxes: true
+  draw_centroids: true
+  draw_trajectories: true
+  trajectory_length_frames: 50

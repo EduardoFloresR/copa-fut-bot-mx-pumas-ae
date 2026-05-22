@@ -1,0 +1,11 @@
+opencv-python
+numpy
+pandas
+matplotlib
+tqdm
+moviepy
+supervision
+jupyterlab
+ipykernel
+pyyaml
+huggingface_hub

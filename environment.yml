@@ -1,0 +1,24 @@
+name: futbotmx-sam3
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python=3.12
+  - pip
+  - git
+  - ffmpeg
+
+  - pip:
+      - opencv-python
+      - numpy
+      - pandas
+      - matplotlib
+      - tqdm
+      - moviepy
+      - supervision
+      - jupyterlab
+      - ipykernel
+      - pyyaml
+      - huggingface_hub

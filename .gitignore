@@ -1,0 +1,57 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+
+# =========================
+# Entornos virtuales
+# =========================
+.env
+.venv/
+venv/
+env/
+
+# =========================
+# Datos grandes
+# =========================
+data/raw/*
+data/clips/*
+data/frames/*
+data/processed/*
+
+# =========================
+# Resultados pesados
+# =========================
+outputs/masks/*
+outputs/logs/*
+
+# =========================
+# Modelos y pesos
+# =========================
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+# =========================
+# Archivos del sistema o editor
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =========================
+# Mantener estructura de carpetas
+# =========================
+!**/.gitkeep
+!data/raw/README.md
+!data/clips/README.md
+!data/frames/README.md
+!data/processed/README.md
