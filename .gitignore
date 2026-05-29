@@ -29,6 +29,7 @@ data/processed/*
 # =========================
 outputs/masks/*
 outputs/logs/*
+outputs/figures/*
 
 # =========================
 # Modelos y pesos
